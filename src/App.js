@@ -27,6 +27,9 @@ class App extends Component {
               key={}
             />
           </div>
+          <div className="notesFooter">
+            Footer here...
+          </div>
         </div>
       </div>
     );
