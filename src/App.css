@@ -1,10 +1,12 @@
 html{
+  width: 100%;
   height: 100%;
 }
 
 body {
+  
   width: 100%;
-  min-height:100%;
+  height: 100%;
   background: 
     linear-gradient(-45deg, rgba(0,0,0,0.3), rgba(0, 40, 105, 0.8)),
     url('./Static/new-york-city.jpg');
@@ -12,33 +14,27 @@ body {
   background-size: cover; 
 }
 
-/* * {
-  height: 100%;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border: 0;
-} */
-
 .notesWrapper {
   display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: minmax(200px, 600px);
   justify-content: center;
-  align-items: center;
-  grid-template-columns: repeat(auto-fit, 1fr);
   grid-gap: 20px;
-  /* border: 5px dotted darkturquoise; */
 }
 
 .notesHeader {
-  font-family: 'Josefin Sans', sans-serif;
-  color: lightcoral;
+  /* grid-area: header; */
+  font-family: 'Josefin Sans', sans-serif; 
+  color: lightcoral; 
 }
 
 .notesBody {
-  display: grid;
-  grid-gap: 20px;
+  /* display: grid;
+  grid-area: main; 
+  grid-template-columns: repeat(2, 1fr);   */
 }
 
 .notesFooter {
-  background: lightcoral;
+  font-family: 'Lato', sans-serif;
 }
+

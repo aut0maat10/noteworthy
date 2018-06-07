@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import Note from './Note/Note';
+import NoteForm from './NoteForm/NoteForm';
+
+
 
 class App extends Component {
 
@@ -13,6 +16,15 @@ class App extends Component {
       ],
     }
   }
+
+  addNote = (note) => {
+    const previousNotes = this.state.notes;
+    previousNotes.push({ id: previousNotes.length + 1, noteContent: note});
+    this.setState({
+      notes: previousNotes,
+    })
+  }
+
   render() {
     return (
       <div className="notesWrapper">
@@ -21,7 +33,7 @@ class App extends Component {
             <h1>React & Firebase Noteworthy App</h1>
           </div>
         </div>
-        <div className="notesBody">
+        {/* <div className="notesBody"> */}
           {
             this.state.notes.map(note => {
               return (
@@ -34,10 +46,10 @@ class App extends Component {
             })
           }
           
-        </div>
-        <div className="notesFooter">
-          Footer here...
-        </div>
+        {/* </div> */}
+        {/* <div className="notesFooter"> */}
+          <NoteForm  addNote={this.addNote}/>
+        {/* </div> */}
       </div>
     );
   }
