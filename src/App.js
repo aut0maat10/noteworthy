@@ -10,7 +10,7 @@ class App extends Component {
       notes: [
         { id: 1, noteContent: "Note 1 here!" },
         { id: 2, noteContent: "Note 2 here!" }
-      ];
+      ],
     }
   }
   render() {
@@ -20,16 +20,23 @@ class App extends Component {
           <div className="heading">
             <h1>React & Firebase Noteworthy App</h1>
           </div>
-          <div className="notesBody">
-            <Note 
-              noteContent={} 
-              noteId={} 
-              key={}
-            />
-          </div>
-          <div className="notesFooter">
-            Footer here...
-          </div>
+        </div>
+        <div className="notesBody">
+          {
+            this.state.notes.map(note => {
+              return (
+                <Note
+                  noteContent={note.noteContent}
+                  noteId={note.noteId}
+                  key={note.noteId}
+                />
+              )
+            })
+          }
+          
+        </div>
+        <div className="notesFooter">
+          Footer here...
         </div>
       </div>
     );

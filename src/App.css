@@ -1,28 +1,44 @@
-.App {
-  text-align: center;
+html{
+  height: 100%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+body {
+  width: 100%;
+  min-height:100%;
+  background: 
+    linear-gradient(-45deg, rgba(0,0,0,0.3), rgba(0, 40, 105, 0.8)),
+    url('./Static/new-york-city.jpg');
+  background-attachment: fixed;
+  background-size: cover; 
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+/* * {
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+} */
+
+.notesWrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-gap: 20px;
+  /* border: 5px dotted darkturquoise; */
 }
 
-.App-title {
-  font-size: 1.5em;
+.notesHeader {
+  font-family: 'Josefin Sans', sans-serif;
+  color: lightcoral;
 }
 
-.App-intro {
-  font-size: large;
+.notesBody {
+  display: grid;
+  grid-gap: 20px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.notesFooter {
+  background: lightcoral;
 }
