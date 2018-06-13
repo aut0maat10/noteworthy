@@ -16,19 +16,19 @@ class NoteForm extends Component {
   }
 
   writeNote = () => {
-
     this.props.addNote(this.state.newNoteContent);
     this.setState({
       newNoteContent: '',
     })
   }
+
   render() {
     return (
       <div className="formWrapper">
         <textarea
           rows="4"
           className="noteInput" 
-          placeholder="Write a new note"
+          placeholder="Write a new note . . ."
           value={this.state.newNoteContent}
           onChange={this.handleUserInput}
         />

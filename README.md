@@ -1,3 +1,12 @@
+
+# NoteWorthy
+
+Simple React/Firebase ToDo app styled with CSS Grid
+
+![app screenshot](https://i.imgur.com/cbsT0Df.png)
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
